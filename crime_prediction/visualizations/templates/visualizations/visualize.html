@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h3 id="heading">Visualization</h3>
+<div id="predict">
+    <h3>CHATS</h3>
+</div>
+<div id="chats">
+    <h3>Chat on crimes occurrence</h3>
+    <img src="data:image/png;base64,{{ img|safe }}">
+    <h3>Chat on crimes occurrence per region</h3>
+    <img src="data:image/png;base64,{{ img1|safe }}">
+    <h3>Chat on crimes occurrence Yearly</h3>
+    <img src="data:image/png;base64,{{ img2|safe }}">
+</div>
+{% endblock content %}

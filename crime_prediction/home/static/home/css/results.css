@@ -1,0 +1,59 @@
+#resultTable {
+    border-collapse: separate;
+	background-color: #FFFFFF;
+    border-spacing: 0;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 0%;
+	color: #666666;
+    text-shadow: 0 1px 0 #FFFFFF;
+	border: 1px solid #999999;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+	margin-top: 10px;
+}
+#resultTable thead tr th {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #222222;
+    padding: 10px 14px;
+    text-align: left;
+	font-size: 13px;
+}
+
+#resultTable tbody tr td{
+	font: bold 13px 'Arial';
+    text-align: left;
+	padding: 10px 14px;
+	border-top: 1px solid #999999;
+}
+
+#resultTable td{
+	padding:7px; border:#4e95f4 1px solid;
+}
+
+#resultTable tr{
+	background: #fff;
+}
+#resultTable tr:hover {
+    background-color: #27ae60;
+ }
+ #resultTable tr:hover th{
+    color: white;
+ }
+ #resultTable tr:hover td{
+    color: white;
+ }
+ #resultTable tr td img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+ }
+ #resultTable tr td button{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: var(--button_color_danger);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border: none;
+ }

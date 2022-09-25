@@ -1,0 +1,41 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h3 id="heading">Recent predictions</h3>
+    <div id="recent">
+        {% if data %}
+        <table id="resultTable">
+            <tr>
+                <th>#</th>
+                <th>Region</th>
+                <th>Date</th>
+                <th>Hour</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Predicted case</th>
+                <th>Actions</th>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.address }}</td>
+                <td>{{ i.crime_date }}</td>
+                <td>{{ i.hour }}</td>
+                <td>{{ i.latitude }}</td>
+                <td>{{ i.longitude }}</td>
+                <td>{{ i.predicted_case }}</td>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <div id="resultTable">
+            No predictions have been made
+            <a href="{% url 'predictions' %}">Click here to make predictions</a>
+        </div>
+        {% endif %}
+
+
+    </div>
+{% endblock content %}

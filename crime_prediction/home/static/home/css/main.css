@@ -1,0 +1,139 @@
+:root{
+    --primary_color:#ffffff;
+    --secondary_color: whitesmoke;
+    --body_background_color:#eaeff1;
+    --button_color: goldenrod;
+    --button_color_danger: red;
+    --shadow_color:#4c5155;
+    --huge_font_size:35px;
+    --large_font_size:23px;
+    --medium_font_size:17px;
+    --small_font_size:15px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:var(--secondary_color);
+    background-image: url("../images/police1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb:vertical {
+    background-color: grey;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: lightgrey;
+}
+
+#header{
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+#header #logo{
+    margin-left: 5px;
+    font-weight: 20;
+    font-size: 25px;
+    color: blueviolet;
+    text-decoration:none;
+}
+
+#header #logo i{
+    font-weight: bolder;
+    font-size: 30px;
+    color: var(--button_color);
+}
+
+#header #links a{
+    margin-left: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#header #profile a{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#header #profile a:hover{
+    text-decoration: underline;
+    text-underline-position: under 10px;
+}
+
+
+#side_bar{
+    width: 20%;
+    margin-top: 0px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary_color);
+}
+
+#side_bar a{
+    padding-left: 5px;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: .5s ease-in-out;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#side_bar a:hover{
+    background-color: var(--button_color);
+    color: var(--primary_color);
+}
+
+#holder{
+    margin-top:50px;
+    width:80%;
+    height: 100vh;
+    margin-left:20%;
+    background-color:/*var(--secondary_color)*/ #99999999;
+}
+
+#holder #heading{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#holder #train_button{
+    width: 20%;
+    margin-left: 79%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: var(--button_color);
+}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predictIt</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/results.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'predictions/css/prediction.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/chats.css' %}">
+</head>
+<body>
+<div id="header">
+    <a id="logo" href="{% url 'home' %}">Predict<i><b>It</b></i></a>
+
+    <div id="profile">
+        <a href="{% url 'profile' %}">User@user.com</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+<div id="side_bar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'home'%}">Recent predictions</a>
+    <a href="{% url 'dataset'%}">View dataset</a>
+    <a href="{% url 'predictions' %}">Prediction</a>
+    <a href="{% url 'summary' %}">Summary</a>
+    <a href="{% url 'visualize' %}">Visualization</a>
+</div>
+<div id="holder">
+    {% block content%}
+    {% endblock %}
+</div>
+
+</body>
+</html>

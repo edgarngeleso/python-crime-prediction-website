@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/login.css' %}"
+</head>
+<body>
+<div id="holder">
+    <div id="about">
+        <h2>Crime prediction system</h2>
+        <div>
+            This system aims at predicting
+            future occurrence of a crime based on a
+            trained dataset through a machine learning algorithm
+        </div>
+    </div>
+
+    <div id="login">
+        <h2>Login</h2>
+        {% if error %}
+            <b class="error">{{ error }}</b>
+        {% endif %}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <label>User name</label>
+            <input type="text" name="uname" placeholder="username">
+            <label>Password</label>
+            <input type="password" name="pwd" placeholder="password">
+            <button type="submit" name="login">Login</button>
+        </form>
+        <a href="#">Forgot password?</a>
+        <!--<div id="copyright">
+            Copy right @ 2022
+            All rights reserved
+        </div>-->
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+#summary {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 0%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+#profile_page {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 0%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+}
+
+#chats {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 0%;
+    background-color: whitesmoke;
+}
+
+#chats img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}

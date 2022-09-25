@@ -1,0 +1,42 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h3 id="heading">Prediction</h3>
+<div id="predict">
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Fill this form</h2>
+        <label>Region</label>
+        <input type="text" name="region" placeholder="region...">
+        <label>Date</label>
+        <input type="date" name="date" placeholder="date">
+        <label>Hour</label>
+        <input type="text" name="hour" placeholder="hour...">
+        <label>Longitude</label>
+        <input type="text" name="longitude" placeholder="longitude...">
+        <label>Latitude</label>
+        <input type="text" name="latitude" placeholder="latitude...">
+        <button type="submit">Predict</button>
+    </form>
+    {% if results %}
+        <div id="results">
+            <div id="result">
+                <h2>Results</h2>
+                <h4>Region:{{ results.region }}</h4>
+                <h4>Date:{{ results.date }}</h4>
+                <h4>Hour:{{ results.hour }}</h4>
+                <h4>Longitude:{{ results.longitude }}</h4>
+                <h4>Latitude:{{ results.latitude }}</h4>
+                <h4>Predicted case:{{ results.predicted_case }}</h4>
+            </div>
+
+        </div>
+        {% else %}
+        <div id="results">
+            <div id="no_results">
+                Fill the form and click predict button.
+                Predicted results will show up here.
+            </div>
+        </div>
+        {% endif %}
+    </div>
+{% endblock content %}

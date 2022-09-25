@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h3 id="heading">Crime dataset</h3>
+<!--<table id="resultTable">
+    <tr>
+        <th>#</th>
+        <th>Region</th>
+    </tr>
+
+    {% for d in df %}
+        <tr>
+            <td>#</td>
+            <td>{{ d }}</td>
+        </tr>
+    {% endfor %}
+</table>-->
+<div id="resultTable">
+    {{ x|safe }}
+</div>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <button type="submit" id="train_button">Train dataset</button>
+</form>
+
+
+{% endblock content %}
